@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Items = () => {
+const DisplayInventoryItem = () => {
     return (
         <div className="flex gap-10 m-10 p-5 border-2 shadow-slate-50 rounded-2xl">
 
@@ -19,4 +19,4 @@ const Items = () => {
     );
 };
 
-export default Items;
+export default DisplayInventoryItem;
