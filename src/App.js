@@ -10,6 +10,7 @@ import Login from './pages/Login/Login/Login';
 import Loading from './pages/Shared/Loading/Loading';
 import Register from './pages/Login/Register/Register';
 import FourOFour from './pages/Shared/FourOFour/FourOFour';
+import AddItems from './Items/AddItems/AddItems';
 
 
 
@@ -18,7 +19,7 @@ import FourOFour from './pages/Shared/FourOFour/FourOFour';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -34,6 +35,11 @@ function App() {
             <Checkout />
           </RequireAuth>
         } /> */}
+        <Route path="additems" element={
+          <RequireAuth>
+            <AddItems></AddItems>
+          </RequireAuth>
+        } />
         <Route path="blogs" element={<Blogs />} />
         {/* <Route path="verificationsend" element={<VerificationSend />} /> */}
         {/* <Route path="about" element={<About />} /> */}
