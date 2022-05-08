@@ -1,34 +1,38 @@
 import React from 'react';
+import useInventoryItem from '../../../Hooks/useInventoryItem/useInventoryItem';
 import bannerPic from '../../../images/banner-pic.png';
+import DisplayInventoryItem from '../../../Items/DisplayInventoryItem/DisplayInventoryItem';
 
 const Home = () => {
 
+    // data load from custom hook 
+    const [item, setItem] = useInventoryItem();
     return (
         <div>
             <div className="md:flex bg-black items-center justify-evenly pb-5 md:pb-0">
-                <div className="w-10/12 mx-auto justify-items-end md:order-2"><img className="w-9/12" src={bannerPic} alt="" /></div>
-                <div className="mx-auto w-4/12 md:ml-32 text-left">
+                <div className="md:w-10/12 mx-auto justify-items-end md:order-2"><img className="w-9/12" src={bannerPic} alt="" /></div>
+                <div className="mx-auto md:w-4/12 md:ml-32 p-8 text-left">
 
                     <h1 className="md:text-2xl font-serif text-white text-lg font-semibold mb-5">SOME NEW 2023 VEHICLES
                         HAVE LAUNCHED</h1>
                     <h1 className="md:text-sm font-semibold text-white font-serif">STAY TUNED FOR THE NEXT LAUNCH JUNE 7TH AT 6 AM</h1>
-                    <button className="border-2 border-indigo-600 px-6 py-2 rounded text-white md:text-xs my-5">EXPLORE NEW VEHICLES</button>
+                    <button className="border-2 border-green-600 hover:text-green-600  px-6 py-2 rounded text-white md:text-xs my-5 whitespace-nowrap">EXPLORE NEW VEHICLES</button>
 
                 </div>
 
 
             </div>
             <div>
-                <h1 className="text-3xl font-bold text-blue-900 mt-20 text-center">Services</h1>
+                <h1 className="text-3xl font-bold text-green-700 mt-20 text-center">Inventory Items</h1>
                 <div className="grid md:grid-cols-3">
 
-                    {/* {
-                        service.slice(0, 3).map(review => <DisplayService
-                            key={review.id}
-                            review={review}
-                        ></DisplayService>)
+                    {
+                        item.slice(0, 6).map(item => <DisplayInventoryItem
+                            key={item._id}
+                            item={item}
+                        ></DisplayInventoryItem>)
 
-                    } */}
+                    }
 
                 </div>
             </div>

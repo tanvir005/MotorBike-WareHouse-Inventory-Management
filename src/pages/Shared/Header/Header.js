@@ -26,15 +26,15 @@ const Header = () => {
                     </div>
                     <ul className={`inline-grid md:flex text-sm bg-black font-bold text-gray-200 md:gap-2 md:justify-center text-left justify-start absolute left-1 duration-500 ease-in md:sticky px-5 pt-5 ${open ? 'top-15' : 'top-[-860px]'}`}>
                         <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/">Home</CustomLink>
-                        <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/services">Service</CustomLink>
+                        <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/inventory">InventoryItems</CustomLink>
                         <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/blogs">Blogs</CustomLink>
                         <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/about">About</CustomLink>
                         <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/checkout">Checkout</CustomLink>
                         {
                             user ? <div className="inline-grid md:flex md:gap-10 md:justify-center text-left justify-start">
                                 <img className="w-12 h-12 rounded-full border-2" src={user?.photoURL ? user?.photoURL : commonPic} alt="" />
-                                {/* <button onClick={() => signOut(auth)} className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8 font-bold  duration-300 ease-in" >{user?.displayName}</button> */}
-                                <button onClick={() => signOut(auth)} className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8 font-bold  duration-300 ease-in" >Sign Out</button>
+                                <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/additem">AddItem</CustomLink>
+                                <button onClick={() => signOut(auth)} className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8 duration-300 ease-in font-bold pb-8" >Signout</button>
 
 
                             </div>

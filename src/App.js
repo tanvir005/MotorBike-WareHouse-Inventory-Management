@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import RequireAuth from '../src/pages/RequireAuth/RequireAuth';
 import Footer from './pages/Shared/Footer/Footer';
@@ -11,6 +10,9 @@ import Loading from './pages/Shared/Loading/Loading';
 import Register from './pages/Login/Register/Register';
 import FourOFour from './pages/Shared/FourOFour/FourOFour';
 import AddItems from './Items/AddItems/AddItems';
+import InventoryItems from './Items/InventoryItems/InventoryItems';
+import DisplayInventoryItem from './Items/DisplayInventoryItem/DisplayInventoryItem';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -23,9 +25,9 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="services" element={<Services />} />
-        <Route path="services" element={<DisplayService />} />
-        <Route path="checkout" element={
+        <Route path="inventory" element={<InventoryItems />} />
+        <Route path="inventory/:id" element={<DisplayInventoryItem />} />
+        {/* <Route path="checkout" element={
           <RequireAuth>
             <Checkout />
           </RequireAuth>
@@ -35,7 +37,7 @@ function App() {
             <Checkout />
           </RequireAuth>
         } /> */}
-        <Route path="additems" element={
+        <Route path="additem" element={
           <RequireAuth>
             <AddItems></AddItems>
           </RequireAuth>
@@ -55,6 +57,7 @@ function App() {
         <Route path="*" element={<FourOFour />} />
       </Routes>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
