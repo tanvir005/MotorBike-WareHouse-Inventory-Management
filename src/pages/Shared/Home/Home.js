@@ -1,14 +1,16 @@
 import React from 'react';
+import bannerPic from '../../../images/banner-pic.png';
 
 const Home = () => {
 
     return (
         <div>
             <div className="md:flex  bg-slate-300 items-center justify-evenly pb-5 md:pb-0">
-                <div className="w-1/2 mx-auto justify-items-end md:order-2"><img className="w-9/12" src="{img}" alt="" /></div>
+                <div className="w-1/2 mx-auto justify-items-end md:order-2"><img className="w-9/12" src={bannerPic} alt="" /></div>
                 <div className="mx-auto w-1/2 md:ml-32">
-                    <p className="md:text-lg text-green-800">Professional training</p>
-                    <h1 className="md:text-5xl text-lg font-semibold whitespace-nowrap">Uncover the Secret of Successful</h1>
+
+                    <h1 className="md:text-5xl text-lg font-semibold whitespace-nowrap">SOME NEW 2023 VEHICLES
+                        HAVE LAUNCHED</h1>
                     <h1 className="md:text-6xl font-semibold font-serif">Compitative Programmer<span className="font-bold md:text-6xl text-green-800">!</span></h1>
 
                     <div className="flex justify-staet gap-10 mx-auto mt-5 ">
