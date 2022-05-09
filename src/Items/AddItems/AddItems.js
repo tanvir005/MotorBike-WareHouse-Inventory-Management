@@ -32,16 +32,16 @@ const AddItems = () => {
 
     return (
         <div>
-            <h2 className="text-slate-600  font-bold text-5xl my-10 text-center">Add nwe Item Here</h2>
-            <form className="gap-5 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col mx-32 border-2 shadow-slate-50" onSubmit={handleSubmit(onSubmit)}>
-                <input className='mb-2 border-2 shadow-slate-50 p-5' placeholder="Name" {...register("name")} />
-                <textarea className='mb-2 border-2 shadow-slate-50 p-5' placeholder="Description" {...register("description")} />
-                <input className='mb-2 border-2 shadow-slate-50 p-5' placeholder="Suplier Name" type="text" {...register("suplier")} />
-                <input className='mb-2 border-2 shadow-slate-50 p-5' placeholder="Photo URL" type="text" {...register("img")} />
-                <input className='mb-2 border-2 shadow-slate-50 p-5' placeholder="Price" type="number" {...register("price")} />
-                <input className='mb-4 border-2 shadow-slate-50 p-5' placeholder="Quantity" type="number" {...register("quantity")} />
+            <h2 className="text-green-600  font-bold text-5xl my-10 text-center">Add New Item Here</h2>
+            <form className="gap-2 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col mx-32 border-2 shadow-green-50" onSubmit={handleSubmit(onSubmit)}>
+                <input className='mb-2 border-2 shadow-green-50 p-2' placeholder="Name" {...register("name")} />
+                <textarea className='mb-2 border-2 shadow-green-50 p-2' placeholder="Description" {...register("description")} />
+                <input className='mb-2 border-2 shadow-green-50 p-2' placeholder="Suplier Name" type="text" {...register("suplier")} />
+                <input className='mb-2 border-2 shadow-green-50 p-2' placeholder="Photo URL" type="text" {...register("img")} />
+                <input className='mb-2 border-2 shadow-green-50 p-2' placeholder="Price" type="number" {...register("price")} />
+                <input className='mb-4 border-2 shadow-green-50 p-2' placeholder="Quantity" type="number" {...register("quantity")} />
 
-                <input className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-5 px-4 w-full p-5 rounded focus:outline-none focus:shadow-outline " type="submit" value="Add Service" />
+                <input className="bg-green-800 hover:bg-green-700 text-white font-bold py-3 px-4 w-full p-5 rounded focus:outline-none focus:shadow-outline " type="submit" value="Add Item" />
             </form>
 
         </div>

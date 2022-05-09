@@ -68,7 +68,7 @@ const Login = () => {
     return (
 
         <div className="w-full max-w-lg mx-auto mb-10">
-            <p className="text-slate-600  font-bold text-5xl my-10">Login Here</p>
+            <p className="text-green-600  font-bold text-5xl my-10">Login Here</p>
             <form onSubmit={handleOnClickSignin} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -101,10 +101,10 @@ const Login = () => {
                 </div>
                 <div className="">
                     <input
-                        className=" bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 w-full rounded focus:outline-none focus:shadow-outline"
+                        className=" bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 w-full rounded focus:outline-none focus:shadow-outline"
                         type="submit"
                         value="Login" />
-                    <p onClick={handleRestPass} className="inline-block cursor-pointer justify-center font-bold text-sm text-slate-800 hover:text-slate-700" href="#">Forgot Password?</p>
+                    <p onClick={handleRestPass} className="inline-block cursor-pointer justify-center font-bold text-sm text-green-800 hover:text-green-700" href="#">Forgot Password?</p>
                 </div>
                 <div className="my-5 flex items-center justify-evenly">
                     <div className="border-b-2 w-5/12"></div>

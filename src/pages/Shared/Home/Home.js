@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useInventoryItem from '../../../Hooks/useInventoryItem/useInventoryItem';
 import bannerPic from '../../../images/banner-pic.png';
 import DisplayInventoryItem from '../../../Items/DisplayInventoryItem/DisplayInventoryItem';
@@ -35,6 +36,9 @@ const Home = () => {
 
                     }
 
+                </div>
+                <div className="hover:bg-green-600 bg-green-700 text-white font-bold py-4 text-center mx-auto w-1/2  rounded focus:outline-none focus:shadow-outline">
+                    <Link className="" to="/manageinventory">Manage Inventory</Link>
                 </div>
             </div>
             <div className="md:flex items-center gap-10 m-10 p-10">

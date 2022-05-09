@@ -14,6 +14,7 @@ import InventoryItems from './Items/InventoryItems/InventoryItems';
 import DisplayInventoryItem from './Items/DisplayInventoryItem/DisplayInventoryItem';
 import { ToastContainer } from 'react-toastify';
 import ManageItems from './Items/ManageItems/ManageItems';
+import ManageInventory from './Items/ManageInventory/ManageInventory';
 
 
 
@@ -31,6 +32,11 @@ function App() {
         <Route path="inventory/:id" element={
           <RequireAuth>
             <ManageItems />
+          </RequireAuth>
+        } />
+        <Route path="manageinventory" element={
+          <RequireAuth>
+            <ManageInventory />
           </RequireAuth>
         } />
         {/*
