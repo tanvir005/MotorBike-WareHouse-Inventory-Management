@@ -28,8 +28,6 @@ const Header = () => {
                         <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/">Home</CustomLink>
                         <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/inventory">InventoryItems</CustomLink>
                         <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/blogs">Blogs</CustomLink>
-                        <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/about">About</CustomLink>
-                        <CustomLink className="px-2 inline-block h-14 rounded hover:border-b-green-600 hover:border-b-8  duration-300 ease-in" to="/checkout">Checkout</CustomLink>
                         {
                             user ? <div className="inline-grid md:flex md:gap-10 md:justify-center text-left justify-start">
                                 <img className="w-12 h-12 rounded-full border-2" src={user?.photoURL ? user?.photoURL : commonPic} alt="" />

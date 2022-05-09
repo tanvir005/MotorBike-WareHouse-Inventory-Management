@@ -39,29 +39,15 @@ function App() {
             <ManageInventory />
           </RequireAuth>
         } />
-        {/*
-        <Route path="service/:serviceName" element={
-          <RequireAuth>
-            <Checkout />
-          </RequireAuth>
-        } /> */}
         <Route path="additem" element={
           <RequireAuth>
             <AddItems></AddItems>
           </RequireAuth>
         } />
         <Route path="blogs" element={<Blogs />} />
-        {/* <Route path="verificationsend" element={<VerificationSend />} /> */}
-        {/* <Route path="about" element={<About />} /> */}
         <Route path="login" element={<Login />} />
         <Route path="loading" element={<Loading />} />
         <Route path="register" element={<Register />} />
-        {/* <Route path="successPayment" element={
-          <RequireAuth>
-            <Payment />
-          </RequireAuth> 
-        } /> */}
-        {/* <Route path="cart" element={<Cart />} /> */}
         <Route path="*" element={<FourOFour />} />
       </Routes>
       <Footer></Footer>

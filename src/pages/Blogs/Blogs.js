@@ -4,35 +4,39 @@ const Blogs = () => {
     return (
         <div className="md:m-40 m-10">
             <div className="md:p-10 p-5">
-                <h1 className="md:text-3xl text-slate-700 font-bold text-left">Difference between authorization and authentication.</h1>
-                <p className="md:ml-5 md:text-2xl text-slate-500 text-left"> Authentication is a procedure,
-                    in which the identification of users is checked for giving the access to the system.
-                    Whereas authorization is the procedure of verifying what particular applications,
-                    files, and data a user has to access. Authentication is executed earlier than the
-                    authorization procedure,
-                    while the authorization procedure is executed after the authentication procedure.
+                <h1 className="md:text-3xl text-slate-700 font-bold text-left">Difference between javascript and nodejs.</h1>
+                <p className="md:ml-5 md:text-2xl text-slate-500 text-left"> JavaScript is a simple programming language that runs in any browser JavaScript Engine.
+                    Whereas Node JS is an interpreter or running environment for a JavaScript programming language that holds many excesses,
+                    it requires libraries that can easily be accessed from JavaScript programming for better use. Javascript used for any client
+                    side activity for a web application . On the otherhand nodejs used for accessing or performing any non-blocking operation of
+                    any operating system. Javascript running engines are : Firebox , javascript core(safari),google chrome etc. Node js running
+                    engine only v8 google chrome.
                 </p>
             </div>
             <div className="md:p-10 p-5">
-                <h1 className="md:text-3xl text-slate-700 font-bold text-left">Why are you using firebase? What other options do you have to implement authentication?</h1>
+                <h1 className="md:text-3xl text-slate-700 font-bold text-left">Differences between sql and nosql databases.</h1>
                 <p className="md:ml-5 md:text-2xl text-slate-500 text-left">
-                    We use FIrebase to make our authentication easy.
-                    Because Firebase Authentication provides ready-made UI libraries, easy-to-use SDKs,
-                    and backend services to authenticate users to our Web app. We can authenticate using
-                    Email-passwords email link kicking and popular social sites like Google, Github,
-                    Facebook and Twitter, and more.
+                    SQL is a relational database managemnet system. On the otherhand nosql
+                    is a distributed databse managemnet system. SQL is vertically scalable and
+                    nosql is horiozantly scalable. SQL work with fixed or predefined scheema and
+                    nosql work with dynamic scheema. SQL can be used for complex queries .
+                    Nosql is not good for complex queries.
 
                 </p>
-                <h1 className="md:text-2xl text-slate-700 font-bold text-left">Best Open Source Firebase Alternatives:</h1>
-                <ul className="md:pl-5 md:ml-5 md:text-2xl text-slate-500 text-left">
-                    <li >AWS Amplify</li>
-                    <li > Flutter</li>
-                    <li >LoopBack</li>
-                    <li > SashiDo</li>
-                    <li >Parse</li>
-                    <li >Back4App</li>
-                </ul>
             </div>
+
+            <div className="md:p-10 p-5">
+                <h1 className="md:text-3xl text-slate-700 font-bold text-left">When should you use nodejs and when should you use mongodb?</h1>
+                <p className="md:ml-5 md:text-2xl text-slate-500 text-left">
+
+                    If we are building a website and we need a database to store the data or information
+                    then we can use MongoDB but to be connected with MongoDB we need a connector,
+                    so here we can use NodeJS which will help our website to run outside of server.
+                    So we can say that we use mongodb for store data. NodeJS is a JavaScript runtime environment.
+                    It's actually helps JavaScript to run outside of server. It's used in server side development.
+                </p>
+            </div>
+
 
         </div>
     );

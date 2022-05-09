@@ -82,7 +82,7 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
         // signOut(auth);
-        // navigate('/verificationsend');
+        navigate('/');
     }
 
 
