@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router';
 
 const DisplayInventoryItem = ({ item }) => {
 
+
     const { _id, name, img, description, price, quantity } = item;
 
     const navigate = useNavigate();
 
     const navigateToCheckOut = id => {
-        navigate(`/inventoryitems/${id}`)
+        navigate(`/inventory/${id}`)
     }
 
     return (
@@ -21,7 +22,7 @@ const DisplayInventoryItem = ({ item }) => {
                 <p className="text-black text-justify font-bold text-lg my-5">Quantity: {quantity}pcs</p>
                 <p className="text-black text-justify font-bold text-lg my-5">Price:  ${price}</p>
 
-                <button onClick={() => navigateToCheckOut(_id)} className=" bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 w-full rounded focus:outline-none focus:shadow-outline" type="button">
+                <button onClick={() => navigateToCheckOut(_id)} className="hover:bg-green-600 bg-green-700 text-white font-bold py-2 w-full rounded focus:outline-none focus:shadow-outline" type="button">
                     Manage Item
                 </button>
 

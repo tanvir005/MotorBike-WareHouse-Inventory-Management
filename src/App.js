@@ -13,6 +13,7 @@ import AddItems from './Items/AddItems/AddItems';
 import InventoryItems from './Items/InventoryItems/InventoryItems';
 import DisplayInventoryItem from './Items/DisplayInventoryItem/DisplayInventoryItem';
 import { ToastContainer } from 'react-toastify';
+import ManageItems from './Items/ManageItems/ManageItems';
 
 
 
@@ -26,12 +27,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="inventory" element={<InventoryItems />} />
-        <Route path="inventory/:id" element={<DisplayInventoryItem />} />
-        {/* <Route path="checkout" element={
+
+        <Route path="inventory/:id" element={
           <RequireAuth>
-            <Checkout />
+            <ManageItems />
           </RequireAuth>
         } />
+        {/*
         <Route path="service/:serviceName" element={
           <RequireAuth>
             <Checkout />

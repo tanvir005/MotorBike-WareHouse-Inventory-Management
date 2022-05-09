@@ -4,6 +4,7 @@ import DisplayInventoryItem from '../DisplayInventoryItem/DisplayInventoryItem';
 
 const InventoryItems = () => {
     const [item, setItem] = useInventoryItem();
+
     return (
         <div>
 

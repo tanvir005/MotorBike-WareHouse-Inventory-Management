@@ -23,7 +23,8 @@ const Home = () => {
 
             </div>
             <div>
-                <h1 className="text-3xl font-bold text-green-700 mt-20 text-center">Inventory Items</h1>
+
+                <h1 className="text-3xl font-bold mt-20 text-center" style={{ color: '#69bd27' }}>Inventory Items</h1>
                 <div className="grid md:grid-cols-3">
 
                     {
