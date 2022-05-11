@@ -15,7 +15,7 @@ const AddItems = () => {
 
     const navigate = useNavigate();
     const onSubmit = data => {
-        fetch('http://localhost:5000/invenrotyitems', {
+        fetch('https://enigmatic-chamber-62078.herokuapp.com/invenrotyitems', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

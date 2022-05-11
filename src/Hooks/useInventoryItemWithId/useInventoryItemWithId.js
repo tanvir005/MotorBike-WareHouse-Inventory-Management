@@ -5,7 +5,7 @@ const useInventoryItemWithId = id => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/invenrotyitems/${id}`;
+        const url = `https://enigmatic-chamber-62078.herokuapp.com/invenrotyitems/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))

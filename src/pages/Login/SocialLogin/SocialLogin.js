@@ -41,7 +41,7 @@ const SocialLogin = () => {
         return <p>Loading...</p>;
     }
     const accessToken = async email => {
-        const { data } = await axios.post('http://localhost:5000/login', { email });
+        const { data } = await axios.post('https://enigmatic-chamber-62078.herokuapp.com/login', { email });
         console.log(data);
         localStorage.setItem('accessToken', data.accessToken);
     }
