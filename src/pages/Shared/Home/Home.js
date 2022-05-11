@@ -35,8 +35,8 @@ const Home = () => {
             </div>
             <div className="flex">
                 <Link className="bg-green-500 hover:bg-green-700 text-white font-bold text-center py-4 px-4 w-full p-2 m-8  rounded focus:outline-none focus:shadow-outline"
-                    to="/additem">
-                    ADD NEW ITEM
+                    to="/manageinventory">
+                    Manage Inventory
                 </Link>
             </div>
             <div className="md:flex items-center gap-10 m-10 p-10">

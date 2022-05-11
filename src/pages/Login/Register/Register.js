@@ -88,7 +88,7 @@ const Register = () => {
 
     return (
         <div className="w-full max-w-lg mx-auto my-auto mb-10">
-            <p className="text-slate-600  font-bold text-5xl my-10">Registration Here</p>
+            <p className="text-green-600  font-bold text-5xl my-10">Registration Here</p>
             <form onSubmit={handleOnClickReg} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -96,7 +96,6 @@ const Register = () => {
                             First Name
                         </label>
                         <input ref={nameFrist} className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white invalid:border-pink-500 invalid:text-pink-600" id="grid-first-name" type="text" placeholder="Frist name" required />
-                        {/* <p className="text-red-500 text-xs italic">Please fill out this field.</p> */}
                     </div>
                     <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-last-name">
@@ -137,12 +136,12 @@ const Register = () => {
                 </div>
                 {errorMsg}
                 <div className="mb-6">
-                    <p className="text-lg italic">Already Registered? <Link className="text-blue-900 hover:underline" to="/login">Login here.</Link></p>
+                    <p className="text-lg italic">Already Registered? <Link className="text-green-900 hover:underline font-bold" to="/login">Login here.</Link></p>
                 </div>
                 <div className="flex items-center justify-between">
                     <input
                         disabled={match}
-                        className=" bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 w-full rounded focus:outline-none focus:shadow-outline disabled:bg-slate-300 disabled:text-slate-500 disabled:shadow-none"
+                        className=" bg-green-800 hover:bg-green-700 text-white font-bold py-2 w-full rounded focus:outline-none focus:shadow-outline disabled:bg-slate-300 disabled:text-slate-500 disabled:shadow-none"
                         type="submit"
                         value="Register"
                     />

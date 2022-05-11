@@ -5,6 +5,8 @@ import auth from '../../../firebase.init';
 import google from '../../../SocialLogoImg/images/google-logo.png';
 import git from '../../../SocialLogoImg/images/git.png';
 import yt from '../../../SocialLogoImg/images/yt-logo.png';
+const axios = require('axios');
+
 
 
 const SocialLogin = () => {
@@ -19,9 +21,10 @@ const SocialLogin = () => {
 
 
 
-    const handleGoogleSignIn = (event) => {
+    const handleGoogleSignIn = async (event) => {
+
         event.preventDefault();
-        signInWithGoogle();
+        await signInWithGoogle();
     }
     const handleGitSignIn = event => {
         event.preventDefault();
@@ -31,12 +34,21 @@ const SocialLogin = () => {
     let errorElement;
     if (googleError || gitError) {
         errorElement = <p className="text-red-700"> Error: {googleError?.message}{gitError?.message}</p>
+
     }
 
     if (gitLoading || googleLoading) {
         return <p>Loading...</p>;
     }
+    const accessToken = async email => {
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        console.log(data);
+        localStorage.setItem('accessToken', data.accessToken);
+    }
+
     if (googleUser || gitUser) {
+        const email = googleUser.user.email;
+        accessToken(email);
         navigate(from, { replace: true });
     }
 

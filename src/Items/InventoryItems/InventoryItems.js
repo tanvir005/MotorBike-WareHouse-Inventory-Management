@@ -8,7 +8,7 @@ const InventoryItems = () => {
     return (
         <div>
 
-            <h1 className="text-3xl font-bold text-blue-900 mt-20 text-center">Total {item.length} srvices available</h1>
+            <h1 className="text-3xl font-bold text-blue-900 mt-20 text-center">Total {item.length} Items available</h1>
             <div className="grid md:grid-cols-3">
 
 

@@ -31,7 +31,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="text-start ">
-                        <h1 className="text-2xl font-bold mb-5 text-green-500">Follow Me</h1>
+                        <h1 className="text-2xl font-bold mb-5 text-green-500">Follow Us</h1>
                         <ul className="flex gap-5">
                             <a href="https://www.google.com/" target='_blank'><img className="w-5 h-5" src={google} alt="" /></a>
                             <a href="https://www.youtube.com" target='_blank'><img className="w-5 h-5" src={yt} alt="" /></a>

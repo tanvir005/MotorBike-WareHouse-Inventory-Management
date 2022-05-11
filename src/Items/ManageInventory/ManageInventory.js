@@ -2,8 +2,9 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router';
 import useInventoryItem from '../../Hooks/useInventoryItem/useInventoryItem';
-import { TrashIcon, XIcon } from '@heroicons/react/solid'
+import { PencilIcon, TrashIcon, XIcon } from '@heroicons/react/solid'
 
 const ManageInventory = () => {
     const [items, setItems] = useInventoryItem();
@@ -27,6 +28,13 @@ const ManageInventory = () => {
 
     }
 
+    const navigate = useNavigate();
+
+    const navigateToManage = id => {
+        navigate(`/inventory/${id}`)
+    }
+
+
 
 
     return (
@@ -40,6 +48,7 @@ const ManageInventory = () => {
                         <th>Supplier Name</th>
                         <th>Price</th>
                         <th>Quantity Available</th>
+                        <th>Update</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
@@ -52,14 +61,17 @@ const ManageInventory = () => {
                                 <td className="text-left whitespace-nowrap">{product.price}</td>
                                 <td className="text-left whitespace-nowrap">{product.quantity}</td>
                                 <td className="whitespace-nowrap">
-                                    <TrashIcon onClick={() => handleDelete(product._id)} className="text-red-700 w-7 h-7  text-center"></TrashIcon>
+                                    <PencilIcon onClick={() => navigateToManage(product._id)} className="text-green-700 w-7 h-7  text-center cursor-pointer"></PencilIcon>
+                                </td>
+                                <td className="whitespace-nowrap">
+                                    <TrashIcon onClick={() => handleDelete(product._id)} className="text-red-700 w-7 h-7  text-center cursor-pointer"></TrashIcon>
                                 </td>
                             </tr>
                         )
                     }
                 </tbody>
             </Table>
-            <Link className="bg-green-500 hover:bg-green-700 text-white font-bold text-center py-4 px-4 w-full p-2 mt-4 rounded focus:outline-none focus:shadow-outline"
+            <Link className="bg-green-500 hover:bg-green-700 text-white font-bold text-center py-4 px-4 w-full p-2 mt-4 mb-24 rounded focus:outline-none focus:shadow-outline"
                 to="/additem">
                 ADD NEW ITEM
             </Link>

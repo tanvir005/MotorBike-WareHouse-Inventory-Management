@@ -1,7 +1,9 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { Navigate, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
 
 const AddItems = () => {
     const {
@@ -9,6 +11,7 @@ const AddItems = () => {
         handleSubmit,
     } = useForm();
 
+    const [user] = useAuthState(auth);
 
     const navigate = useNavigate();
     const onSubmit = data => {
@@ -29,14 +32,14 @@ const AddItems = () => {
             })
     }
 
-
     return (
         <div>
             <h2 className="text-green-600  font-bold text-5xl my-10 text-center">Add New Item Here</h2>
-            <form className="gap-2 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col mx-32 border-2 shadow-green-50" onSubmit={handleSubmit(onSubmit)}>
+            <form className="gap-2 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col md:mx-32 mx-4 border-2 shadow-green-50" onSubmit={handleSubmit(onSubmit)}>
+                <input className='mb-2 border-2 shadow-green-50 p-2' placeholder="Added By" value={user.email} {...register("email")} />
                 <input className='mb-2 border-2 shadow-green-50 p-2' placeholder="Name" {...register("name")} />
                 <textarea className='mb-2 border-2 shadow-green-50 p-2' placeholder="Description" {...register("description")} />
-                <input className='mb-2 border-2 shadow-green-50 p-2' placeholder="Suplier Name" type="text" {...register("suplier")} />
+                <input className='mb-2 border-2 shadow-green-50 p-2' placeholder="Suplier Name" type="text" {...register("supplier")} />
                 <input className='mb-2 border-2 shadow-green-50 p-2' placeholder="Photo URL" type="text" {...register("img")} />
                 <input className='mb-2 border-2 shadow-green-50 p-2' placeholder="Price" type="number" {...register("price")} />
                 <input className='mb-4 border-2 shadow-green-50 p-2' placeholder="Quantity" type="number" {...register("quantity")} />

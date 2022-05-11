@@ -71,9 +71,9 @@ const ManageItems = () => {
 
     return (
         <div>
-            <h2 className="text-green-600  font-bold text-5xl my-10 text-center">Add nwe Item Here</h2>
-            <div className="border-2 shadow-green-50 rounded-2xl m-10 p-5 flex flex-col items-center">
-                <div className="md:flex gap-10  ">
+            <h2 className="text-green-600  font-bold text-5xl my-2 text-center">Manage Item Here</h2>
+            <div className="border-2 shadow-green-50 rounded-2xl p-5 flex flex-col items-center">
+                <div className="md:flex gap-10  mb-28">
                     <div className="md:w-1/2 p-10 border-2 shadow-green-50 rounded-2xl order-1 mb-5">
                         <img className="mx-auto hover:rotate-2" src={item?.img} alt="" />
                         <h3 className="text-2xl font-bold text-left ">{item?.name}</h3>
@@ -108,9 +108,9 @@ const ManageItems = () => {
                         </form>
                     </div>
                 </div>
-                <Link className="bg-green-500 hover:bg-green-700 text-white font-bold text-center py-4 px-4 w-full p-2 mt-4 rounded focus:outline-none focus:shadow-outline"
-                    to="/additem">
-                    ADD NEW ITEM
+                <Link className="bg-green-500 hover:bg-green-700 text-white font-bold text-center py-4 px-4 w-full p-2 my-8 rounded focus:outline-none focus:shadow-outline"
+                    to="/manageinventory">
+                    Manage Inventory
                 </Link>
             </div>
 
