@@ -15,7 +15,7 @@ const AddItems = () => {
 
     const navigate = useNavigate();
     const onSubmit = data => {
-        fetch('https://motor-bike-ware-house-inventory-management-server-3so944qfo.vercel.app/invenrotyitems', {
+        fetch('https://motor-bike-ware-house-inventory-management-server-7y42lzg6m.vercel.app/invenrotyitems', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

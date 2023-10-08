@@ -41,7 +41,7 @@ const SocialLogin = () => {
         return <p>Loading...</p>;
     }
     const accessToken = async email => {
-        const { data } = await axios.post('https://motor-bike-ware-house-inventory-management-server-3so944qfo.vercel.app/login', { email });
+        const { data } = await axios.post('https://motor-bike-ware-house-inventory-management-server-7y42lzg6m.vercel.app/login', { email });
         console.log(data);
         localStorage.setItem('accessToken', data.accessToken);
     }
