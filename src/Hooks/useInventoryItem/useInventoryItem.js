@@ -5,7 +5,7 @@ const useInventoryItem = () => {
 
 
     useEffect(() => {
-        fetch('https://enigmatic-chamber-62078.herokuapp.com/invenrotyitems')
+        fetch('https://motor-bike-ware-house-inventory-management-server-3so944qfo.vercel.app//invenrotyitems')
             .then(res => res.json())
             .then(data => setItem(data))
     }, []);

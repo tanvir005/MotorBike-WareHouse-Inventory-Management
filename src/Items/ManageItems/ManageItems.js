@@ -25,7 +25,7 @@ const ManageItems = () => {
 
 
         // //send data to server
-        const url = `https://enigmatic-chamber-62078.herokuapp.com/invenrotyitems/${id}`;
+        const url = `https://motor-bike-ware-house-inventory-management-server-3so944qfo.vercel.app//invenrotyitems/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -49,7 +49,7 @@ const ManageItems = () => {
         }
 
         //send data to server
-        const url = `https://enigmatic-chamber-62078.herokuapp.com/invenrotyitems/${id}`;
+        const url = `https://motor-bike-ware-house-inventory-management-server-3so944qfo.vercel.app//invenrotyitems/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

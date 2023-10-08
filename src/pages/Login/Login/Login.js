@@ -37,7 +37,7 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passRef.current.value;
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('https://enigmatic-chamber-62078.herokuapp.com/login', { email });
+        const { data } = await axios.post('https://motor-bike-ware-house-inventory-management-server-3so944qfo.vercel.app//login', { email });
         localStorage.setItem('accessToken', data.accessToken)
 
     }

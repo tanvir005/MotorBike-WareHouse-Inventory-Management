@@ -13,7 +13,7 @@ const MyItems = () => {
     useEffect(() => {
 
         const email = user?.email;
-        const url = `https://enigmatic-chamber-62078.herokuapp.com/invenrotyitemsQ?email=${email}`;
+        const url = `https://motor-bike-ware-house-inventory-management-server-3so944qfo.vercel.app//invenrotyitemsQ?email=${email}`;
         fetch(url, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -27,7 +27,7 @@ const MyItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you want to delete?');
         if (proceed) {
-            const url = `https://enigmatic-chamber-62078.herokuapp.com/invenrotyitems/${id}`;
+            const url = `https://motor-bike-ware-house-inventory-management-server-3so944qfo.vercel.app//invenrotyitems/${id}`;
             console.log(url);
             fetch(url, {
                 method: 'DELETE'
